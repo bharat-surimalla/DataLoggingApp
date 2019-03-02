@@ -12,8 +12,8 @@ export class AppComponent {
   eventData = {};
   logData = {};
   settings = {};
-  durationByData :number;
-  durationByEvents:number;
+  durationByData : number;
+  durationByEvents: number;
   constructor(private http: HttpClient,
               private duration : DuartionService
     ){

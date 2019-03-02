@@ -52,7 +52,6 @@ export class DuartionService {
             durationByEvent = durationByEvent + ((x1-x2)/1000);
           }
       }
-      console.log(durationByEvent);
       return durationByEvent;
   }
 
@@ -99,7 +98,6 @@ export class DuartionService {
               {
                  x2 = new Date(logData[j].timestamp).getTime();     
                  this.outBoundTimeStamps.push({stamp:(logData[i].timestamp),duration:(x2-x1)}); 
-                 console.log(x2-x1);
                  break;
               }            
             }
@@ -136,7 +134,6 @@ export class DuartionService {
       uniqueItems.forEach((element)=>{
         this.totalDurationByData = this.totalDurationByData + element.duration;
       });
-      console.log(this.totalDurationByData);
       return (this.totalDurationByData/1000);    
    } 
    
