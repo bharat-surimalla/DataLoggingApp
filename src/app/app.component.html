@@ -1,0 +1,57 @@
+<body>
+<div class="w3-content" style="max-width:1500px">
+<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+  <h1 class="w3-xlarge">Data Logging App</h1>
+</header>
+<div class="w3-row-padding w3-grayscale" style="margin-bottom:128px; margin-left: 128px;margin-right: 128px">
+  <div class="w3-half" >
+      <h2>
+          Device Info
+        </h2>
+        <h3>
+          Serial No: {{jsonData.serialNumber}}
+        </h3>
+        
+        <h3>
+          Start Time : {{jsonData.startTime|date }},{{jsonData.startTime|date:'mediumTime' }}
+        </h3>
+        <h3>
+          End Time : {{jsonData.endTime | date }},{{jsonData.endTime | date :'mediumTime' }}
+        </h3>
+
+  </div>
+
+  <div class="w3-half ">
+      <h3>
+          Alarm Duration From Events : {{durationByEvents }} Seconds
+        </h3>
+        <h3>
+          Alarm Duration From Data : {{durationByData}} Seconds
+        </h3>
+  </div>
+</div>
+</div>
+<footer class="w3-container w3-padding-16 w3-light-grey w3-center w3-small"> 
+  Note: The gap between the timestamps is assumed as the duration of alarm(When data goes out of given range).
+</footer>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
